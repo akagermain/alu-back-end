@@ -9,7 +9,7 @@ if __name__ == "__main__":
     employee_id = int(sys.argv[1])
 
     user = requests.get("{}/users/{}".format(base_url, employee_id)).json()
-    todos = requets.get(
+    todos = requests.get(
         "{}/todos".format(base_url), params={"userId": employee_id}
     ).json()
 
